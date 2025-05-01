@@ -11,3 +11,14 @@ heslo_6 = "panpes7778"  # PASS -> "Heslo je v pořádku"
 heslo = heslo_6
 """
 
+new_password = input("Create a strong password: ")
+if new_password == "":
+    print("FAILED - your password cannot be empty!")
+elif len(new_password) < 8:
+    print("FAILED - your password is too short!")
+elif new_password.isnumeric() is True:
+    print("FAILED - Your password must contain digits and letters!")
+elif new_password[0].isnumeric() is True:
+    print("FAILED - Your password must not start with digits!")
+else:
+    print("OK - Your password has been created")
